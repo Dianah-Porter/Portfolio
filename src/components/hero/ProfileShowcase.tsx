@@ -33,12 +33,17 @@ export function ProfileShowcase() {
       <div
         id="hero-avatar"
         className="relative h-[78%] w-[78%] overflow-hidden rounded-full border-4 border-white bg-secondary shadow-soft-lg"
+        style={{ perspective: '1000px' }}
       >
         <img
           src={profile.avatar}
           alt={`Portrait of ${profile.name}`}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-transform duration-700 ease-out"
           loading="eager"
+          style={{
+            transform: 'rotateX(30deg) scale(1.18)',
+            transformOrigin: 'center',
+          }}
         />
       </div>
 

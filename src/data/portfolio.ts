@@ -18,7 +18,7 @@ export const profile = {
   name: 'Diane',
   role: 'Backend & Full-Stack Developer',
   bio: "I design and ship reliable, well-architected backend systems and APIs — turning complex requirements into clean, scalable services. I care about developer experience, performance, and code that ages well.",
-  avatar: '/prof.jpeg', // Drop your own photo in /public and point this here.
+  avatar: '/profiles.jpeg', // Drop your own photo in /public and point this here.
   location: 'Kigali, Rwanda',
   email: 'dianahporter@gmail.com',
   resumeUrl: '#',
