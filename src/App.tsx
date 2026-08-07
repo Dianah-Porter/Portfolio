@@ -1,68 +1,34 @@
-import { User, Wrench, FolderGit2, Briefcase, Mail } from 'lucide-react'
 import { AdaptiveNav } from '@/components/layout/AdaptiveNav'
+import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
-import { PlaceholderSection } from '@/components/sections/PlaceholderSection'
-import { profile } from '@/data/portfolio'
+import { About } from '@/components/sections/About'
+import { Skills } from '@/components/sections/Skills'
+import { Projects } from '@/components/sections/Projects'
+import { Experience } from '@/components/sections/Experience'
+import { Contact } from '@/components/sections/Contact'
 
 function App() {
   return (
     <div className="relative min-h-screen overflow-x-clip">
+      <a
+        href="#about"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand-400 focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-zinc-950"
+      >
+        Skip to content
+      </a>
+
       <AdaptiveNav />
 
       <main>
         <Hero />
-
-        <PlaceholderSection
-          id="about"
-          eyebrow="About"
-          title="A bit about me"
-          description="This is where your story goes — your journey into software, what drives you, and the kind of problems you love to solve."
-          icon={User}
-        />
-
-        <PlaceholderSection
-          id="skills"
-          eyebrow="Skills"
-          title="Tools I build with"
-          description="Showcase your technical stack, proficiencies, and the technologies you reach for when architecting reliable systems."
-          icon={Wrench}
-          tinted
-        />
-
-        <PlaceholderSection
-          id="projects"
-          eyebrow="Projects"
-          title="Things I've shipped"
-          description="Feature your best work here — case studies, live demos, and repositories that demonstrate the depth of your engineering."
-          icon={FolderGit2}
-        />
-
-        <PlaceholderSection
-          id="experience"
-          eyebrow="Experience"
-          title="Where I've worked"
-          description="A timeline of your roles, education, and milestones — the experiences that shaped how you build software today."
-          icon={Briefcase}
-          tinted
-        />
-
-        <PlaceholderSection
-          id="contact"
-          eyebrow="Contact"
-          title="Let's build together"
-          description="Add a contact form or your links so people can reach you. Ready when you are to turn an idea into something real."
-          icon={Mail}
-        />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Contact />
       </main>
 
-      <footer className="border-t border-border py-8">
-        <div className="container flex flex-col items-center justify-between gap-3 text-sm text-muted-foreground sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} {profile.name}. Crafted with care.
-          </p>
-          <p>Built with React, TypeScript, Tailwind &amp; Framer Motion.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

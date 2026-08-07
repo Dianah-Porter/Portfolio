@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Mail } from 'lucide-react'
+import { ArrowUpRight, Mail, Download } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { ProfileShowcase } from '@/components/hero/ProfileShowcase'
@@ -42,7 +42,7 @@ export function Hero() {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="max-w-xl"
+          className="max-w-2xl"
         >
           <motion.div
             variants={slideInLeft}
@@ -72,8 +72,15 @@ export function Hero() {
           </motion.p>
 
           <motion.p
+            variants={slideInLeft}
+            className="mt-1.5 text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground"
+          >
+            {profile.tagline}
+          </motion.p>
+
+          <motion.p
             variants={fadeIn}
-            className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg"
+            className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
             {profile.bio}
           </motion.p>
@@ -110,6 +117,12 @@ export function Hero() {
               <a href="#contact">
                 <Mail className="h-5 w-5" />
                 Contact Me
+              </a>
+            </Button>
+            <Button asChild variant="ghost" size="lg">
+              <a href={profile.resumeUrl} download>
+                <Download className="h-5 w-5" />
+                Download CV
               </a>
             </Button>
           </motion.div>

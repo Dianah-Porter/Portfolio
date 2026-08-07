@@ -51,6 +51,10 @@ export default {
           900: '#6b3712',
         },
       },
+      spacing: {
+        // `h-13` is used by the large button size; not in Tailwind's defaults.
+        13: '3.25rem',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
