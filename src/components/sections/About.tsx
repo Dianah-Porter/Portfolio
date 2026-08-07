@@ -77,7 +77,7 @@ export function About() {
                   key={title}
                   className="group rounded-2xl border border-border bg-card p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-soft-lg"
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-zinc-950">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-zinc-950 dark:bg-brand-400/15 dark:text-brand-300 dark:group-hover:text-zinc-950">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h3 className="mt-4 font-display text-base font-bold text-foreground">

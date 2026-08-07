@@ -114,7 +114,7 @@ export function AdaptiveNav() {
       <motion.div
         aria-hidden
         style={{ opacity: bgOpacity }}
-        className="fixed left-1/2 top-2 h-[3.75rem] w-[21rem] max-w-[calc(100vw-1.5rem)] -translate-x-1/2 rounded-full border border-border bg-white/85 shadow-soft-lg backdrop-blur-xl"
+        className="fixed left-1/2 top-2 h-[3.75rem] w-[21rem] max-w-[calc(100vw-1.5rem)] -translate-x-1/2 rounded-full border border-border bg-white/85 shadow-soft-lg backdrop-blur-xl dark:bg-zinc-900/85"
       />
 
       {navItems.map((item, i) => {
@@ -139,7 +139,7 @@ export function AdaptiveNav() {
               'group/nav pointer-events-auto fixed flex h-11 w-11 items-center justify-center rounded-full border shadow-soft backdrop-blur-md transition-colors duration-300',
               active
                 ? 'border-transparent bg-brand-400 text-zinc-950 shadow-glow'
-                : 'border-white/60 bg-white/70 text-muted-foreground hover:text-foreground',
+                : 'border-white/60 bg-white/70 text-muted-foreground hover:text-foreground dark:border-white/10 dark:bg-white/10',
             )}
           >
             <Icon
@@ -151,7 +151,7 @@ export function AdaptiveNav() {
             <span
               role="tooltip"
               className={cn(
-                'pointer-events-none absolute z-10 whitespace-nowrap rounded-lg bg-zinc-950 px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-soft transition-opacity duration-200 group-hover/nav:opacity-100',
+                'pointer-events-none absolute z-10 whitespace-nowrap rounded-lg bg-zinc-950 px-2.5 py-1 text-xs font-medium text-white opacity-0 shadow-soft transition-opacity duration-200 group-hover/nav:opacity-100 dark:bg-zinc-800',
                 docked
                   ? 'left-1/2 top-full mt-3 -translate-x-1/2'
                   : 'right-full top-1/2 mr-3 -translate-y-1/2',

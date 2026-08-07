@@ -2,7 +2,7 @@
 
 A modern, animated personal developer portfolio built with **React + TypeScript + Vite**, **Tailwind CSS**, **shadcn/ui**-style components, and **Framer Motion**.
 
-Six sections — Hero, About, Skills, Projects, Experience, Contact — tied together by a floating navigation dock that orbits the hero portrait and glides into a top bar as you scroll. Color palette: white / black with a warm orange accent (`#F4A621`).
+Six sections — Hero, About, Skills, Projects, Experience, Contact — tied together by a floating navigation dock that orbits the hero portrait and glides into a top bar as you scroll. Light and dark themes, with a warm orange accent (`#F4A621`) shared by both.
 
 ## Getting started
 
@@ -47,6 +47,21 @@ Almost all copy lives in **one file** — [`src/data/portfolio.ts`](src/data/por
 The orange accent is the `brand` scale in [`tailwind.config.js`](tailwind.config.js)
 and the `--accent` / `--ring` tokens in [`src/index.css`](src/index.css).
 
+## Light / dark mode
+
+The floating button in the bottom-right corner switches themes. Behaviour:
+
+- **First visit** follows the operating system's `prefers-color-scheme`, and keeps
+  following it live if the visitor changes it.
+- **Clicking the toggle** makes it an explicit choice, saved to `localStorage`
+  under `portfolio-theme`, and the OS is no longer consulted.
+- An inline script in [`index.html`](index.html) resolves the theme *before first
+  paint*, so a dark-mode visitor never sees a white flash on load.
+
+Colors come from the CSS variables in [`src/index.css`](src/index.css) — the
+`:root` block is light, `.dark` is dark. Change a token there and both themes
+follow. Logic lives in [`src/lib/theme.ts`](src/lib/theme.ts).
+
 ## Contact form
 
 The form in [`Contact.tsx`](src/components/sections/Contact.tsx) has **no backend**.
@@ -62,13 +77,14 @@ src/
 │   ├── ui/            # Button, Badge, SectionHeading, brand icons
 │   ├── motion/        # Reveal wrapper + shared animation variants
 │   ├── hero/          # ProfileShowcase (decorative circular portrait)
-│   ├── layout/        # AdaptiveNav (orbit → top bar), Footer
+│   ├── layout/        # AdaptiveNav (orbit → top bar), Footer, ThemeToggle
 │   └── sections/      # Hero, About, Skills, Projects, Experience, Contact
 ├── hooks/
 │   └── useActiveSection.ts   # scroll-spy for the nav dock
 ├── data/
 │   └── portfolio.ts   # ← all content lives here
 ├── lib/
+│   ├── theme.ts       # light/dark resolution + persistence
 │   └── utils.ts       # cn() class-name helper
 ├── App.tsx
 └── index.css          # Tailwind + theme tokens
@@ -84,7 +100,10 @@ src/
 
 ## Accessibility & SEO
 
-- Respects `prefers-reduced-motion` (animations collapse to near-instant).
+- Respects `prefers-reduced-motion` (animations collapse to near-instant) and
+  `prefers-color-scheme` (until the visitor picks a theme by hand).
+- The theme toggle is a real `<button>` with `aria-pressed` and a label that
+  states the action it performs.
 - "Skip to content" link, semantic landmarks (`main`, `nav`, `footer`), and
   focus-visible ring styles throughout.
 - Nav dock buttons have `aria-label`s and `aria-current` on the active section.

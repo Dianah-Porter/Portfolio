@@ -8,7 +8,7 @@ import { slideInLeft, slideInRight } from '@/components/motion/variants'
 import { profile } from '@/data/portfolio'
 
 const inputClass =
-  'w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm text-foreground shadow-soft outline-none transition-colors duration-200 placeholder:text-muted-foreground focus:border-brand-300 focus:ring-2 focus:ring-brand-200'
+  'w-full rounded-2xl border border-border bg-card px-4 py-3 text-sm text-foreground shadow-soft outline-none transition-colors duration-200 placeholder:text-muted-foreground focus:border-brand-300 focus:ring-2 focus:ring-brand-200 dark:focus:ring-brand-400/25'
 
 /**
  * Contact — details on the left, a message form on the right.
@@ -100,7 +100,7 @@ export function Contact() {
               />
             </div>
 
-            <div className="mt-6 rounded-3xl border border-brand-200 bg-brand-50/60 p-6">
+            <div className="mt-6 rounded-3xl border border-brand-200 bg-brand-50/60 p-6 dark:border-brand-400/30 dark:bg-brand-400/5">
               <p className="flex items-center gap-2 font-display text-sm font-bold text-foreground">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-500 opacity-75" />
@@ -217,7 +217,7 @@ function ContactRow({
 }: ContactRowProps) {
   const content = (
     <>
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-zinc-950">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-zinc-950 dark:bg-brand-400/15 dark:text-brand-300 dark:group-hover:text-zinc-950">
         <Icon className="h-5 w-5" />
       </div>
       <div className="min-w-0">

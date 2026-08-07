@@ -72,6 +72,7 @@
 @layer utilities {
   .glass {
     @apply bg-white/60 backdrop-blur-xl border border-white/50;
+    @apply dark:bg-white/5 dark:border-white/10;
   }
 
   .text-balance {

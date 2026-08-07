@@ -16,7 +16,7 @@ export function ProfileShowcase() {
       className="relative mx-auto flex aspect-square w-full max-w-[26rem] items-center justify-center"
     >
       {/* Soft ambient glow */}
-      <div className="absolute inset-6 rounded-full bg-brand-300/40 blur-3xl" />
+      <div className="absolute inset-6 rounded-full bg-brand-300/40 blur-3xl dark:bg-brand-500/25" />
 
       {/* Concentric decorative outlines */}
       <div className="absolute inset-0 rounded-full border border-brand-200/60" />
@@ -32,7 +32,7 @@ export function ProfileShowcase() {
       {/* Portrait — id is the anchor the nav orbits around. */}
       <div
         id="hero-avatar"
-        className="relative h-[78%] w-[78%] overflow-hidden rounded-full border-4 border-white bg-secondary shadow-soft-lg"
+        className="relative h-[78%] w-[78%] overflow-hidden rounded-full border-4 border-white bg-secondary shadow-soft-lg dark:border-zinc-800"
         style={{ perspective: '1000px' }}
       >
         <img
@@ -50,7 +50,7 @@ export function ProfileShowcase() {
       {/* Floating geometric accents — kept to the LEFT so the nav can orbit
           the right side of the photo without colliding. */}
       <FloatingAccent className="-left-2 top-10" delay={0}>
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-950 text-brand-400 shadow-soft">
+        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-950 text-brand-400 shadow-soft dark:bg-zinc-800 dark:ring-1 dark:ring-white/10">
           <Terminal className="h-6 w-6" />
         </div>
       </FloatingAccent>
@@ -66,7 +66,7 @@ export function ProfileShowcase() {
 
       {/* Small solid dots for extra depth (left side only) */}
       <span className="absolute left-8 top-2 h-3 w-3 rounded-full bg-brand-400" />
-      <span className="absolute bottom-4 left-24 h-2 w-2 rounded-full bg-zinc-900/70" />
+      <span className="absolute bottom-4 left-24 h-2 w-2 rounded-full bg-zinc-900/70 dark:bg-white/70" />
     </motion.div>
   )
 }

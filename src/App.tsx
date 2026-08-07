@@ -1,5 +1,6 @@
 import { AdaptiveNav } from '@/components/layout/AdaptiveNav'
 import { Footer } from '@/components/layout/Footer'
+import { ThemeToggle } from '@/components/layout/ThemeToggle'
 import { Hero } from '@/components/sections/Hero'
 import { About } from '@/components/sections/About'
 import { Skills } from '@/components/sections/Skills'
@@ -18,6 +19,7 @@ function App() {
       </a>
 
       <AdaptiveNav />
+      <ThemeToggle />
 
       <main>
         <Hero />

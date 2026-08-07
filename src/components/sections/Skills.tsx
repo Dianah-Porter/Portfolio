@@ -26,7 +26,7 @@ export function Skills() {
               className="h-full"
             >
               <div className="group h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-300 hover:shadow-soft-lg">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-zinc-950">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-zinc-950 dark:bg-brand-400/15 dark:text-brand-300 dark:group-hover:text-zinc-950">
                   <Icon className="h-6 w-6" />
                 </div>
 

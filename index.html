@@ -70,6 +70,25 @@
         ]
       }
     </script>
+    <!--
+      Resolve the theme before first paint so the page never flashes light
+      before switching to dark. Key must match THEME_STORAGE_KEY in src/lib/theme.ts.
+    -->
+    <script>
+      ;(function () {
+        try {
+          var saved = localStorage.getItem('portfolio-theme')
+          var dark =
+            saved === 'dark' ||
+            (saved === null &&
+              matchMedia('(prefers-color-scheme: dark)').matches)
+          document.documentElement.classList.toggle('dark', dark)
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+        } catch (e) {
+          /* no stored preference available — fall back to the light default */
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

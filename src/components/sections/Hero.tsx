@@ -22,8 +22,8 @@ export function Hero() {
     >
       {/* Ambient background accents */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-brand-200/40 blur-3xl" />
-        <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-brand-100/60 blur-3xl" />
+        <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-brand-200/40 blur-3xl dark:bg-brand-500/15" />
+        <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-brand-100/60 blur-3xl dark:bg-brand-400/10" />
         <div
           className="absolute inset-0 opacity-[0.35]"
           style={{

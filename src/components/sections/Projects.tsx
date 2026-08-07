@@ -33,7 +33,7 @@ export function Projects() {
               >
                 <article className="group flex h-full flex-col rounded-3xl border border-border bg-card p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-300 hover:shadow-soft-lg sm:p-8">
                   <header className="flex items-start justify-between gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-zinc-950">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-500 transition-colors duration-300 group-hover:bg-brand-400 group-hover:text-zinc-950 dark:bg-brand-400/15 dark:text-brand-300 dark:group-hover:text-zinc-950">
                       <Icon className="h-6 w-6" />
                     </div>
                     <span className="rounded-full border border-border bg-secondary/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
@@ -64,7 +64,7 @@ export function Projects() {
                     {project.stack.map((tech) => (
                       <li
                         key={tech}
-                        className="rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700"
+                        className="rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700 dark:border-brand-400/30 dark:bg-brand-400/10 dark:text-brand-300"
                       >
                         {tech}
                       </li>
@@ -108,7 +108,7 @@ export function Projects() {
             delay={projects.length * 0.1}
             className="h-full"
           >
-            <div className="flex h-full flex-col items-start justify-center rounded-3xl border border-dashed border-brand-300 bg-brand-50/50 p-8 shadow-soft">
+            <div className="flex h-full flex-col items-start justify-center rounded-3xl border border-dashed border-brand-300 bg-brand-50/50 p-8 shadow-soft dark:border-brand-400/30 dark:bg-brand-400/5">
               <h3 className="font-display text-xl font-bold text-foreground">
                 More on GitHub
               </h3>
