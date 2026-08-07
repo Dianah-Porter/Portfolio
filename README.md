@@ -15,10 +15,9 @@ npm run preview  # preview the production build
 
 ## Before you publish
 
-One manual step remains:
-
-1. **Add your CV.** Save your résumé as `public/Diane-Uwamariya-CV.pdf`. The
-   "Download CV" buttons in the hero and About section already point there.
+Everything needed to deploy is in place, including the CV at
+`public/Diane-Uwamariya-CV.pdf` — replace that file whenever you update your
+résumé and the "Download CV" buttons keep working, no code change needed.
 
 Optional but worth doing:
 
